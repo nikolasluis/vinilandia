@@ -8,6 +8,7 @@
 	left: 550px;
 }
 
+
 table {
 	width: 500px;
 	height: 500px;
@@ -18,6 +19,11 @@ table {
 	font-family: 'Quicksand';
 	font-size: large;
 	color: #FDFFFC;
+}
+
+table .passwords{
+	color: red;
+	text-align: center;
 }
 
 .field {
@@ -81,3 +87,4 @@ table {
 .go_to_login_button:hover {
 	background-color: #D89D6A;
 }
+

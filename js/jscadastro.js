@@ -30,7 +30,7 @@ function cadastrar(){
 	var confirmarSenha = document.getElementById("confirmarSenha").value;
 
 	if(senha!=confirmarSenha){
-		document.getElementById("senha").innerHTML += "<div> senhas erradas man </div>";
+		senhas();
 		senhazinha.confirmarSenha.focus();
 		return false;
 	}
@@ -44,8 +44,7 @@ function cadastrar(){
 }
 
 function senhas(){
-
-	document.getElementById("senha").innerHTML = " ";
-	
+	document.getElementById("pass").innerHTML = " ";
+	document.getElementById("pass").innerHTML += "<div> Senhas não correspondem - Tente novamente </div>";
 
 }
