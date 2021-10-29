@@ -21,6 +21,11 @@ table {
 	color: #FDFFFC;
 }
 
+table .mensagem{
+	color: red;
+	text-align: center;
+}
+
 .field {
 	padding-top: 10px;
 	padding-bottom: 10px;

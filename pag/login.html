@@ -37,20 +37,34 @@
 				<td> <img src="../img/icon05.png" width="40" height="40"> </td>
 			</tr>
 			<tr>
-				<td colspan="2"> <input class="field" type="text" placeholder="Usuário"> </td>
+				<td colspan="2"> 
+					<form name="usuario_login">
+						<input class="field" type="text" placeholder="Usuário" id="username"> 
+					</form>
+				</td>
 			</tr>
 			<tr>
 				<td> Senha </td>
 				<td> <img src="../img/icon06.png" width="40" height="40"> </td>
 			</tr>
 			<tr>
-				<td colspan="2"> <input class="field" type="password" placeholder="Senha"> </td>
+				<td colspan="2"> 
+					<form name="usuario_senha">
+						<input class="field" type="password" placeholder="Senha" id="username_password"> 
+					</form>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<div id="msg" class="mensagem"></div>
+				</td>
 			</tr>
 		</table>
 
 		<p class="estilo_create_acc"> Ainda não possui uma conta? Crie agora! </p>
 
-		<button class="login_button"> Login </button>
+		<button class="login_button" onclick="validacaoLogin()"> Login </button>
 		<button class="create_acc_button" id="b_cadastro" onclick="pag_cadastro()"> Criar conta </button>
 	</body>
 </html>
