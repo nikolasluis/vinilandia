@@ -41,6 +41,7 @@ function cadastrar(){
 	alert("cadastro realizado");
 
 	usuarios.push("aux");
+	window.location.href = document.location="http://localhost/vinilandia/index.html";
 }
 
 function senhas(){
