@@ -20,8 +20,6 @@ function pag_login02() {
 	location.href = "http://localhost/vinilandia/pag/login.html";
 }
 
-var usuarios = [];
-
 function cadastrar(){
 	var aux=[];
 
@@ -29,6 +27,27 @@ function cadastrar(){
 	var email = document.getElementById("email").value;
 	var senha = document.getElementById("senha").value;
 	var confirmarSenha = document.getElementById("confirmarSenha").value;
+
+
+	for(var i=0; i<usuarios.length; i++){
+		if(usuario == usuarios[i][0]){
+			usuaritos();
+			carinha.usuario.focus();
+			return false;
+		}
+	}
+
+	apagarCampoUser();
+
+	for(var i=0; i<usuarios.length; i++){
+		if(usuario == usuarios[i][1]){
+			emailzito();
+			cpemail.email.focus();
+			return false;
+		}
+	}
+
+	apagarCampoMail();
 
 	if(senha!=confirmarSenha){
 		senhas();
@@ -49,5 +68,22 @@ function cadastrar(){
 function senhas(){
 	document.getElementById("pass").innerHTML = " ";
 	document.getElementById("pass").innerHTML += "<div> Senhas não correspondem - Tente novamente </div>";
+}
 
+function usuaritos(){
+	document.getElementById("user").innerHTML = " ";
+	document.getElementById("user").innerHTML += "<div> Usuário já existente - insira um diferente </div>";
+}
+
+function emailzito(){
+	document.getElementById("mail").innerHTML = " ";
+	document.getElementById("mail").innerHTML += "<div> E-mail já cadastrado - insira um diferente </div>";
+}
+
+function apagarCampoUser(){
+	document.getElementById("user").innerHTML = " ";
+}
+
+function apagarCampoMail(){
+	document.getElementById("mail").innerHTML = " ";
 }

@@ -31,20 +31,28 @@
 
 		<p class="estilo_cadastro"> Cadastro </p>
 
-		<table border="0" cellpadding="10" class="table">
+		<table border="1" cellpadding="10" class="table">
 			<tr>
 				<td width="40%"> Usuário </td>
 				<td> <img src="../img/icon05.png" width="40" height="40"> </td>
 			</tr>
 			<tr>
-				<td colspan="2"> <input class="field" type="text" placeholder="Usuário" id="usuario"> </td>
+				<td colspan="2">
+					<form name="carinha">
+						<input class="field" type="text" placeholder="Usuário" id="usuario">
+					</form> 
+				</td>
 			</tr>
 			<tr>
 				<td> E-mail </td>
 				<td> <img src="../img/icon07.png" width="40" height="40"> </td>
 			</tr>
 			<tr>
-				<td colspan="2"> <input class="field" type="text" placeholder="E-mail" id="email"> </td>
+				<td colspan="2"> 
+					<form name="cpemail">
+						<input class="field" type="text" placeholder="E-mail" id="email"> 
+					</form>
+				</td>
 			</tr>
 			<tr>
 				<td> Senha </td>
@@ -62,13 +70,24 @@
 					<form  name="senhazinha">
 						<input class="field" type="password" placeholder="Confirme sua senha" id="confirmarSenha"> 
 					</form> 
-					
 				</td>
 			</tr>
 			
 			<tr>
 				<td colspan="2">
 					<div id="pass" class="passwords"></div>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<div id="user" class="passwords"></div>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<div id="mail" class="passwords"></div>
 				</td>
 			</tr>
 
