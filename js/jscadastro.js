@@ -1,8 +1,9 @@
 /* Comentários
 (Função Procurar e Função CriarConta)
 */
-
-usuarios=[];
+storage = window.localStorage;
+var dadosDoStorage = JSON.parse(storage.getItem("dados"))||"[]";
+var usuarios = dadosDoStorage;
 
 function pag_login01() {
 	document.getElementById("img_login").value;
@@ -38,9 +39,10 @@ function cadastrar(){
 	aux.push(usuario);
 	aux.push(email);
 	aux.push(senha);
-	alert("cadastro realizado");
 
-	usuarios.push("aux");
+	usuarios.push(aux);
+	storage.setItem("dados",JSON.stringify(usuarios));
+	console.log(usuarios);
 	window.location.href = document.location="http://localhost/vinilandia/index.html";
 }
 
