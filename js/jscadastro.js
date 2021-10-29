@@ -37,7 +37,7 @@ function cadastrar(){
 		}
 	}
 
-	apagarCampoUser();
+	apagarCampo();
 
 	for(var i=0; i<usuarios2.length; i++){
 		if(email == usuarios2[i][1]){
@@ -47,7 +47,7 @@ function cadastrar(){
 		}
 	}
 
-	apagarCampoMail();
+	apagarCampo();
 
 	if(senha!=confirmarSenha){
 		senhas();
@@ -73,24 +73,20 @@ function cadastrar(){
 }
 
 function senhas(){
-	document.getElementById("pass").innerHTML = " ";
-	document.getElementById("pass").innerHTML += "<div> Senhas não correspondem - Tente novamente </div>";
+	document.getElementById("msg").innerHTML = " ";
+	document.getElementById("msg").innerHTML = "<div> Senhas não correspondem - Tente novamente </div>";
 }
 
 function usuaritos(){
-	document.getElementById("user").innerHTML = " ";
-	document.getElementById("user").innerHTML += "<div> Usuário já existente - insira um diferente </div>";
+	document.getElementById("msg").innerHTML = " ";
+	document.getElementById("msg").innerHTML = "<div> Usuário já existente - insira um diferente </div>";
 }
 
 function emailzito(){
-	document.getElementById("mail").innerHTML = " ";
-	document.getElementById("mail").innerHTML += "<div> E-mail já cadastrado - insira um diferente </div>";
+	document.getElementById("msg").innerHTML = " ";
+	document.getElementById("msg").innerHTML = "<div> E-mail já cadastrado - insira um diferente </div>";
 }
 
-function apagarCampoUser(){
-	document.getElementById("user").innerHTML = " ";
-}
-
-function apagarCampoMail(){
-	document.getElementById("mail").innerHTML = " ";
+function apagarCampo(){
+	document.getElementById("msg").innerHTML = " ";
 }
