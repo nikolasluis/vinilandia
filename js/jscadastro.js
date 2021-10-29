@@ -59,8 +59,15 @@ function cadastrar(){
 	aux.push(email);
 	aux.push(senha);
 
+
+	if(!(usuarios2 instanceof Array)){
+    	usuarios2 = [usuarios2]; 
+	}
+
 	usuarios2.push(aux);
+
 	storage.setItem("dados",JSON.stringify(usuarios2));
+
 	console.log(usuarios2);
 	window.location.href = document.location="http://localhost/vinilandia/index.html";
 }
