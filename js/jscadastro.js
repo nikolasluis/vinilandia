@@ -3,7 +3,7 @@
 */
 storage = window.localStorage;
 var dadosDoStorage = JSON.parse(storage.getItem("dados"))||"[]";
-var usuarios = dadosDoStorage;
+var usuarios2 = dadosDoStorage;
 
 function pag_login01() {
 	document.getElementById("img_login").value;
@@ -29,8 +29,8 @@ function cadastrar(){
 	var confirmarSenha = document.getElementById("confirmarSenha").value;
 
 
-	for(var i=0; i<usuarios.length; i++){
-		if(usuario == usuarios[i][0]){
+	for(var i=0; i<usuarios2.length; i++){
+		if(usuario == usuarios2[i][0]){
 			usuaritos();
 			carinha.usuario.focus();
 			return false;
@@ -39,10 +39,10 @@ function cadastrar(){
 
 	apagarCampoUser();
 
-	for(var i=0; i<usuarios.length; i++){
-		if(usuario == usuarios[i][1]){
+	for(var i=0; i<usuarios2.length; i++){
+		if(email == usuarios2[i][1]){
 			emailzito();
-			cpemail.email.focus();
+			confirmationEmail.email.focus();
 			return false;
 		}
 	}
@@ -59,9 +59,9 @@ function cadastrar(){
 	aux.push(email);
 	aux.push(senha);
 
-	usuarios.push(aux);
-	storage.setItem("dados",JSON.stringify(usuarios));
-	console.log(usuarios);
+	usuarios2.push(aux);
+	storage.setItem("dados",JSON.stringify(usuarios2));
+	console.log(usuarios2);
 	window.location.href = document.location="http://localhost/vinilandia/index.html";
 }
 
